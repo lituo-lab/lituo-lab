@@ -22,8 +22,7 @@ math: true
 
 - **动能**  
   $$ 
-  T = \underbrace{\frac{1}{2}M\dot{x}^2}_{\text{小车动能}} 
-  + \underbrace{\frac{1}{2}m\left(\dot{x}^2 + l^2\dot{\theta}^2 + 2l\dot{x}\dot{\theta}\cos\theta\right) + \frac{1}{2}\frac{1}{12}m(2l)^2\dot{\theta}^2}_{\text{杆的动能}}
+  T = \underbrace{\frac{1}{2}M\dot{x}^2}_{\text{小车动能}} + \underbrace{\frac{1}{2}m\left(\dot{x}^2 + l^2\dot{\theta}^2 + 2l\dot{x}\dot{\theta}\cos\theta\right) + \frac{1}{2}\frac{1}{12}m(2l)^2\dot{\theta}^2}_{\text{杆的动能}}
   $$
 
 - **总势能**  
@@ -77,12 +76,12 @@ math: true
   $$
   \Delta = (M + m) \cdot \frac{4}{3} m l^2 - (m l \cos\theta)^2 
   $$
+  
   $$
   \begin{bmatrix} 
   \ddot{x} \\ 
   \ddot{\theta} 
-  \end{bmatrix} 
-  = 
+  \end{bmatrix} = 
   \frac{1}{\Delta} 
   \begin{bmatrix} 
   \frac{4}{3} m l^2 & -m l \cos\theta \\ 
@@ -128,6 +127,7 @@ math: true
 
 - **小角度近似**  
   取 $\sin\theta \approx \theta$，$\cos\theta \approx 1$，$\dot{\theta}^2 \sin\theta \approx 0$：
+  
   $$
   \begin{bmatrix} 
   M + m & m l \\ 
@@ -137,20 +137,22 @@ math: true
   \ddot{x} \\ 
   \ddot{\theta} 
   \end{bmatrix} 
-  = 
-  \begin{bmatrix} 
+  = \begin{bmatrix} 
   u \\ 
   m g l \theta 
   \end{bmatrix}
   $$
   
 - **解出加速度表达式**
+- 
   $$
   D = (M + m) \cdot \frac{4}{3} m l^2 - (m l)^2 = m l^2 \left( \frac{4}{3} M + \frac{1}{3} m \right) 
   $$
+  
   $$
   \ddot{x} = \frac{ \frac{4}{3} m l^2 u - m^2 l^2 g \theta }{ D } 
   $$
+  
   $$
   \ddot{\theta} = \frac{ -m l u + (M + m) m g l \theta }{ D }
   $$
